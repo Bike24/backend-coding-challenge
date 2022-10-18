@@ -12,10 +12,9 @@ encoded: MiAqICgyMy8oMyozKSktIDIzICogKDIqMyk=
 
 ## API Description
 
-**Endpoint:**
+**Endpoints:**
 ```
 GET /calculus?query=[input]
-GET /calculus/history
 ```
 
 The input can be expected to be UTF-8 with BASE64 encoding
@@ -23,6 +22,19 @@ The input can be expected to be UTF-8 with BASE64 encoding
 **Result** 
 * On success: JSON response of format: `{ "error": false, "result": number }`
 * On error: Either a HTTP error code or: `{ "error": true, "message": "string" }`
+ 
+ <br />
+
+```
+GET /calculus/history
+```
+
+**Result**
+* On success: ___Find a suitable scheme yourself___
+* On error: Either a HTTP error code or: `{ "error": true, "message": "string" }`
+
+<br />
+<br />
 
 ## Rules
 * Ideally use TypeScript
