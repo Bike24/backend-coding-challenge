@@ -1,5 +1,5 @@
 # Backend Coding Challenge
-Set up a simple web service to implement a calculator. The service offers an endpoint that reads a string input and parses it. It should return either an HTTP error code, or a solution to the calculation in JSON form.
+Set up a simple web service to implement a calculator. The service offers an endpoint that reads a string input and parses it. It should return either an HTTP error code, or a solution to the calculation in JSON form. Furthermore, the service should offer the possibility to return the last 5 calculations with their results.
 Supported mathematical symbols are `+, -, *, /, (, )`
 
 An example calculus query:
@@ -8,11 +8,14 @@ query: 2 * (23/(3*3))- 23 * (2*3)
 encoded: MiAqICgyMy8oMyozKSktIDIzICogKDIqMyk=
 ```
 
+
+
 ## API Description
 
 **Endpoint:**
 ```
 GET /calculus?query=[input]
+GET /calculus/history
 ```
 
 The input can be expected to be UTF-8 with BASE64 encoding
